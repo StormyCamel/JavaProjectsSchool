@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JavaScript Exercise</title>
+</head>
+
+<body>
+
+
+
+        
+        <h1> JavaScript questions </h1>
+
+        <h2>1. Name a situation where you would need to create an "if" statement.</h2>
+        <p> Answer: An "if" statement is used when you have certain variables you want to check. As in, if x = 1 do "blank", but if x = 2 do "blank".</p>
+
+        <h2> 2. When comparing values,  in what data type is the result stored? </h2>
+        <p> Answer: The data is stored in a boolean variable. </p>
+
+
+        <script> 
+        //Ethan Gelatt
+        //March 29th 2025
+
+        //Prompts the user to enter their name. 
+        let username = prompt("Please enter your name: ");
+
+        //Ask if the user is okay with their name being used.
+        let proceed = confirm("Can we use your name on this webpage?");
+
+       // if statement to determine if name can be used 
+        if (proceed) {
+            // If they said we can use their name, this branch goes through
+            console.log("Yes, I can use your name on this page" + username);
+        }
+        else {
+            //else, this branch is run 
+            console.log("No, you can not use my name on this web page. Privacy Please");
+        }
+        //prompt user for their age
+        let age = prompt("Please enter your age: ");
+
+        alert("Hi " + username + "! You are " + age + " years old.");
+
+        </script>
+
+</body>
+</html>
+
+
+
+
