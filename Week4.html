@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Switch Statement Assignment</title>
+      </head>
+      <body>
+      
+        <header>
+          <h1>JavaScript Switch Statement Exercise</h1>
+          <p><strong>Name:</strong> Your Name</p>
+          <p><strong>Date:</strong> March 30, 2025</p>
+        </header>
+      
+        <main>
+          <section>
+            <h2>Question</h2>
+            <p><strong>When would you use a switch statement in your projects?</strong></p>
+            <p>You would use a switch statement when you want to test a variable against multiple constants. This helps clean up the code and make things smoother.</p>
+          </section>    
+        </main>
+
+        <script>
+            //Ethan Gelatt
+            //April 4th-6th
+
+            //Prompt for favorite day
+
+            const favDay = prompt("What is your favorite day? (e.g., Monday, Tuesday)");
+
+            //Switch statement: 
+
+            switch (favDay.toLowerCase()) {
+
+                case 'monday':
+                    console.log('Mondays offer a fresh start to the week!');
+                    break;
+                case 'tuesday':
+                    console.log('You can get things done on Tuesday!');
+                    break;
+                case 'wednesday':
+                    console.log('Wednesdays are the halfway point!');
+                    break;
+                case 'thursdays':
+                    console.log('Thursdays are a cool day!');
+                    break;
+                case 'fridays':
+                    console.log('Fridays are the end of a busy week!');
+                    break;
+                case 'saturday':
+                    console.log('Saturdays are the best!');
+                    break;
+                case 'sunday':
+                    console.log('Sundays are the most relaxing!');
+                    break;
+                default:
+                    console.log('That is not a valid day of the week, please try again!')
+
+
+
+                    
+            }
+        </script>
+        </body>
+        </html>
