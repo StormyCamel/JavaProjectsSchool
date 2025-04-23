@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculate average Gpa</title>
+    </head>
+    <body>
+    <header>
+      <h1>JavaScript Calculation Exercise</h1>
+      <p><strong>Name:</strong> Ethan Gelatt</p>
+      <p><strong>Date:</strong> April 19, 2025</p>
+    </header>
+
+    <main>
+        <section>
+          <h2>Question</h2>
+          <p><strong>What is the purpose of a function? </strong></p>
+          <p>A function is usually created for code that is reusable. A chunk of code that you use several times can be made into a function, cleaning up your code and shortening runtime.</p>
+        </section>    
+    </main>
+
+    <script>
+        // Ethan Gelatt 
+        //April 19th 2025
+
+        //Calculate gas function
+        function calcGasAvg() {
+        let count = 0;
+        let total = 0;
+
+        let weeklyGas = parseFloat(prompt("Enter your weekly gas total (or -1 to end):"));
+
+        while (weeklyGas !== -1) {
+           total += weeklyGas;
+           count++;
+
+           // Ask for the next gas total
+           weeklyGas = parseFloat(prompt("Enter your weekly gas total (or -1 to end):"));
+       }
+
+       //  Prevents divison by zero
+       if (count === 0) {
+           return 0;
+       }
+
+       return total / count;
+       }
+
+        // Prompt the user for their name!
+        const userName = prompt("Please enter your name! ");
+
+        let weeklyGas = parseFloat(prompt("Enter your FIRST weekly gas total (or -1 to end):"));
+
+        let gas = calcGasAvg();
+
+        console.log("Your average weekly gas total: " + gas);
+
+    </script>
+    </body>
+</html>
+
+
