@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name=" viewport " content=" width=device-width, initial-scale=1.0">
+    <title> To-Do List </title>
+</head>
+
+<body>
+
+    <h1>To-Do List</h1>
+
+    <input type="text" id="taskInput" placeholder="Enter a new task">
+
+    <button id="addTaskBtn">Add Task</button>
+
+    <ul id="taskList"></ul>
+
+    <h2>Questions</h2>
+    <p><strong>1. Why is the JavaScript textContent property safer than innerHTML?</strong><br>
+        <em>Answer:</em> The textContent property is safer than innerHTML because it sets or returns only the text content of an element, innerHTML can inject malicious scripts if the input is not done correctly. </p>
+    
+        <p><strong>2. Explain the relationship between an HTML attribute and a corresponding DOM property (with example):</strong><br>
+        <em>Answer:</em> An HTML attribute defines the initial value in the markup, while the corresponding DOM property reflects or updates that value in JavaScript. For example, in <input type="text" value="Hello">, the attribute is value="Hello", but in JavaScript, you can change it with input.value = "Hi" — this updates the DOM property, not the original HTML.</p>
+    <script>
+        const taskInput = document.getElementById("taskInput");
+        const addTaskBtn = document.getElementById("addTaskBtn");
+        const taskList = document.getElementById("taskList");
+
+
+        addTaskBtn.addEventListener("click", function() {
+            const taskText = taskInput.ariaValueMax.trim();
+
+            if (taskText == "") {
+                alert("Please enter a task.");
+                return;
+            }
+
+            const li = document.createElement("li");
+            li.textContent = taskText;
+
+
+            const rmveButton = document.createElement("button");
+            rmveButton.textContent = "Remove";
+            rmveButton.style.marginLeft = '10px';
+
+            rmveButton.addEventListener("click", function() {
+                rmveButton.removeChild("li");
+            });
+
+            li.appendChild(rmveButton);
+
+            taskList.appendChild(li);
+
+            taskInput.value = "";
+            
+             });
+
+    </script>
+</body>
+
+
+</html>
