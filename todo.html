@@ -31,7 +31,7 @@
 
 
         addTaskBtn.addEventListener("click", function() {
-            const taskText = taskInput.ariaValueMax.trim();
+            const taskText = taskInput.value.trim();
 
             if (taskText == "") {
                 alert("Please enter a task.");
@@ -47,7 +47,7 @@
             rmveButton.style.marginLeft = '10px';
 
             rmveButton.addEventListener("click", function() {
-                rmveButton.removeChild("li");
+                taskList.removeChild("li");
             });
 
             li.appendChild(rmveButton);
